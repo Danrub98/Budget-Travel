@@ -1,4 +1,4 @@
-var STATIC_CACHE = "static-cache-v1";
+const STATIC_CACHE = 'static-cache-v1';
 const RUNTIME_CACHE = "runtime-cache";
 
 const FILES_TO_CACHE = [
@@ -17,7 +17,7 @@ self.addEventListener("install", event => {
     event.waitUntil(
         caches
             .open(STATIC_CACHE)
-            .then(cache => cache.addAll(FILES_TO_CACHE))
+            .then((cache) => cache.addAll(FILES_TO_CACHE))
             .then(() => self.skipWaiting())
     )
 })
